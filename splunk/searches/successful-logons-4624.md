@@ -4,6 +4,7 @@ Windows uses EventCode 4624 for successful logons.
 index=main EventCode=4624
 
 This helps identify regular log on activity. This would be useful for recognizing a logon found an account that hasn't been accessed in a while, which may raise flags.
+
 Also ran: index=main EventCode=4624 | table_time Account_Name Logon_Type
 
 Account_Name -> specified which account tried to login to WS01
