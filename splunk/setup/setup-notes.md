@@ -18,7 +18,7 @@ These are the initial setup steps I followed to install Splunk Enterprise and pr
 ---
 
 ## Step 3 — Add Windows Event Logs
-Went to:
+Clicked:
 Add Data -> Monitor -> Local Event Logs (on splunk.com)
 
 Enabled:
