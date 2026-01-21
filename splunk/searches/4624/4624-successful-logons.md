@@ -1,4 +1,4 @@
-This SPL query detects successful logon attempts on virtual machine WS01.
+This SPL query detects successful logon attempts on virtual machine DC.
 Windows uses EventCode 4624 for successful logons.
 
 index=main EventCode=4624
