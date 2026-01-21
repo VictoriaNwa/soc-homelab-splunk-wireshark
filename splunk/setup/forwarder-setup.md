@@ -37,9 +37,9 @@ These are the steps I followed to install the Splunk Universal Forwarder on the 
 ---
 
 ## Step 5 — Enable Windows Event Logs on DC
-- Opened Notebook app as an administrator and opened file
-  - C:\Program Files\SplunkUniversalForwarder\etc\system\local\inputs.conf (I created inputs.conf)
-  - Typed this (to enable fowarding for the logs from DC to Client1)
+- Opened DC's File Explorer
+  - C:\Program Files\SplunkUniversalForwarder\etc\system\local and created inputs.conf as a text document
+- Opened Notebook as administrator and typed this
 [WinEventLog://Application]
 disabled = 0
 
@@ -48,10 +48,12 @@ disabled = 0
 
 [WinEventLog://System]
 disabled = 0
-  - Saved the file
-- Opened command prompt as an admin
+  - Saved the file as **inputs.conf** NOT inputs.conf.txt
+- Restarted the forwarder in command prompt as an admin
   - Ran: cd "C:\Program Files\SplunkUniversalForwarder\bin"
   - Ran: splunk restart
+  - See 
+
 
 ## Step 6 — Verify Log Ingestion on Client1
-Confirmed logs were received using the following searches in Splunk Web:
+Confirmed logs were received using the following search in Splunk Web on Client1 (localhost:8000): 
